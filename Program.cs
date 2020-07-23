@@ -7,8 +7,8 @@ namespace Lab_4._2
 
     class Movie
     {
-        private string _title; // field
-        private string _category; // field
+        private string _title; // Field
+        private string _category; // Field
 
         public string Title
         {
@@ -26,7 +26,7 @@ namespace Lab_4._2
             }
         }
 
-        public Movie(string title, string category) // constructor
+        public Movie(string title, string category) // Constructor that take string title and string category
         {
             _title = title;
             _category = category;
@@ -36,12 +36,11 @@ namespace Lab_4._2
     {
         static void Main(string[] args)
         {
-
             bool done = true;
 
-            List<Movie> movieList = new List<Movie>();
+            List<Movie> movieList = new List<Movie>(); // A list that takes the Movie constructor and is called movieList.
 
-            movieList.Add(new Movie("The Dark Knight", "action"));
+            movieList.Add(new Movie("The Dark Knight", "action")); // Takes the movieList and adds a new Movie object to the list
             movieList.Add(new Movie("The Wolf of Wall Street", "comedy"));
             movieList.Add(new Movie("Django", "action"));
             movieList.Add(new Movie("Pulp Fiction", "crime"));
@@ -68,11 +67,11 @@ namespace Lab_4._2
                 string input = Console.ReadLine().ToLower();
 
                 Console.WriteLine();
-                for (int i = 0; i < movieList.Count; i++)
+                for (int i = 0; i < movieList.Count; i++) // For every item/element in movieList (Count, counts all of the items/elements in the list
                 {
-                    if (input == movieList[i].Category)
+                    if (input == movieList[i].Category) // If input is equal to the movieList Category
                     {
-                        Console.WriteLine(movieList[i].Title);
+                        Console.WriteLine(movieList[i].Title); // Prints the title
                     }
                 }
 
